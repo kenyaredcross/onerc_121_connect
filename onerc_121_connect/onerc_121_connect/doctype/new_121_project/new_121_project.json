@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{project_code}-{name_of_project}",
+ "creation": "2025-11-28 04:57:52.392911",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xqdr",
+  "amended_from",
+  "name_of_project",
+  "column_break_eggp",
+  "fsp",
+  "project_title",
+  "section_break_wwfv",
+  "end_date",
+  "date_of_disbursment",
+  "column_break_phmt",
+  "start_date",
+  "pdm_date",
+  "section_break_uvol",
+  "donor",
+  "donor_code",
+  "column_break_mbiy",
+  "project_code",
+  "budgeted_maintenance_cost",
+  "location_details_section",
+  "details",
+  "disbursment_details_section",
+  "total_targeted_households",
+  "total_disbursement",
+  "column_break_wepm",
+  "service_charge",
+  "total_budget",
+  "support_documents_section",
+  "market_assessment",
+  "column_break_dzco",
+  "communication_plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xqdr",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "New 121 Project",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "label": "Project Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "name_of_project",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor"
+  },
+  {
+   "fieldname": "donor_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Donor Code"
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_eggp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "location_details_section",
+   "fieldtype": "Section Break",
+   "label": "Location Details and Targets"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Location Details 121"
+  },
+  {
+   "fieldname": "disbursment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Disbursment Summary"
+  },
+  {
+   "description": "A calculation of the total project cost (disbursement + charges)",
+   "fieldname": "total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget (KES)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wepm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_targeted_households",
+   "fieldtype": "Int",
+   "label": "Total Targeted Households",
+   "read_only": 1
+  },
+  {
+   "fieldname": "support_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Support Documents"
+  },
+  {
+   "fieldname": "communication_plan",
+   "fieldtype": "Attach",
+   "label": "Community Communication Plan"
+  },
+  {
+   "fieldname": "column_break_dzco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_assessment",
+   "fieldtype": "Data",
+   "label": "Market Assessment Reference Link",
+   "options": "URL"
+  },
+  {
+   "fieldname": "section_break_uvol",
+   "fieldtype": "Section Break",
+   "label": "Project Codes"
+  },
+  {
+   "fieldname": "column_break_mbiy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "1.5% of total disbursement",
+   "fieldname": "service_charge",
+   "fieldtype": "Currency",
+   "label": "Service Charge",
+   "read_only": 1
+  },
+  {
+   "description": "Maintenance Budgeted in the project. Should be at least 29k for each month + 1.5% of total disbursement",
+   "fieldname": "budgeted_maintenance_cost",
+   "fieldtype": "Currency",
+   "label": "Budgeted Maintenance Cost",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fsp",
+   "fieldtype": "Select",
+   "label": "FSP",
+   "options": "Safaricom (MPESA)\nAirtel (Airtel Money)"
+  },
+  {
+   "description": "Total amount to be disbursed to beneficiaires",
+   "fieldname": "total_disbursement",
+   "fieldtype": "Currency",
+   "label": "Total Disbursement",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wwfv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_disbursment",
+   "fieldtype": "Date",
+   "label": "Date of Disbursment"
+  },
+  {
+   "fieldname": "column_break_phmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pdm_date",
+   "fieldtype": "Datetime",
+   "label": "PDM Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-29 07:53:26.853916",
+ "modified_by": "Administrator",
+ "module": "Onerc 121 Connect",
+ "name": "New 121 Project",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
