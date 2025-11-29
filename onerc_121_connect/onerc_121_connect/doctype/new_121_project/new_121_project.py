@@ -22,14 +22,16 @@ class New121Project(Document):
 		disbursement = 0.0
 		transaction_charges = 0.0
 		total_amount = 0.0
+		withdrawal = 0.0
 
 		for row in self.details:
-			households += row.number_targeted
+			households += (row.number_targeted or 0)
 			disbursement += ((row.base_transfer_value or 0) + (row.withdrawal_charges or 0)) * (row.number_targeted or 0) * (row.number_of_tranches or 0)
-			transaction_charges += row.transactional_charges
+			transaction_charges += (row.transactional_charges or 0)
+			withdrawal += (row.withdrawal_charges or 0)
 		
 		self.total_disbursement = disbursement
 		self.total_targeted_households = households
-		self.service_charge = self.total_disbursement * 0.015
+		self.service_charge = (self.total_disbursement + withdrawal)  * 0.015
 		self.total_budget = self.service_charge + self.total_disbursement + transaction_charges + self.service_charge
 
